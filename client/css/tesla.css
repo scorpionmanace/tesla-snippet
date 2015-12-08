@@ -1,0 +1,187 @@
+/* CSS declarations go here */
+
+
+/*List of Common style items*/
+
+body {
+    font-family: helvetica;
+    background-image: url("img/home_hero_auto.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    line-height: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    with: 100%;
+}
+
+/*Styling custom scrollbar*/
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 1);
+}
+.clear {
+    clear: both;
+}
+.floatleft {
+    float: left;
+}
+.floatright {
+    float: right;
+}
+.center {
+    margin: inherit auto;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-justify {
+    text-align: justify;
+}
+.text-center {
+    text-align: center;
+}
+.cmn-toggle {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+}
+.cmn-toggle + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+input.cmn-toggle-round-flat + label {
+    padding: 2px;
+    width: 48px;
+    height: 24px;
+    background-color: #dddddd;
+    border-radius: 48px;
+    transition: background 0.4s;
+}
+input.cmn-toggle-round-flat + label:before,
+input.cmn-toggle-round-flat + label:after {
+    display: block;
+    position: absolute;
+    content: "";
+}
+input.cmn-toggle-round-flat + label:before {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 30px;
+    transition: background 0.4s;
+}
+input.cmn-toggle-round-flat + label:after {
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    width: 20px;
+    background-color: #aaa;
+    border-radius: 20px;
+    transition: margin 0.4s, background 0.4s;
+}
+input.cmn-toggle-round-flat:checked + label {
+    background-color: forestgreen;
+}
+input.cmn-toggle-round-flat:checked + label:after {
+    margin-left: 22px;
+    background-color: forestgreen;
+}
+
+/*List of Common Style items ends here*/
+
+
+/*Options Sepcific Styling Here*/
+
+
+/*Custom Styling the option box*/
+
+#ListOfOptionsWrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    margin: 50px auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    border-radius: 6px;
+    background-color: rgba(51, 51, 51, 0.65);
+    padding: 10px 5px;
+    color: #fff;
+    font-weight: 200;
+    text-shadow: 1px 1px 0.01em #222;
+    box-shadow: 1px 0px 2px #555;
+    -webkit-box-shadow: 1px 0px 2px #555;
+    -moz-box-shadow: 1px 0px 2px #555;
+    border: 1px solid #555;
+    animation-name: options;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    /* Chrome, Safari*/
+    -webkit-animation-name: options;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-iteration-count: 1;
+}
+
+/* Chrome, Safari*/
+
+@-webkit-keyframes options {
+    0% {
+        left: 0px;
+        top: -200px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+@keyframes options {
+    0% {
+        left: 0px;
+        top: -200px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+#ListOfOptionsWrapper .list-wrapper {
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#ListOfOptionsWrapper .button-wrapper {
+    padding: 20px 10px;
+}
+#ListOfOptionsWrapper .list-item {
+    padding: 20px 10px;
+    border-bottom: 1px solid #555;
+}
+#ListOfOptionsWrapper .list-item .option_name {
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

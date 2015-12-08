@@ -1,0 +1,17 @@
+<head>
+    <title>Test Price Options</title>
+</head>
+
+<!--Angular bindig with the application, thus ng-app is used to obind with module-->
+<body ng-app="teslaApp">
+    <!--    including the header of the application in the main application-->
+    <header ng-include="'client/views/common/header.ng.html'"></header>
+
+    <!--    body content of the application included from the angular templates-->
+    <div class="container" ng-include="'client/views/options.ng.html'"></div>
+
+
+    <!--    footer of the application included from the angular -->
+    <footer ng-include="'client/views/common/footer.ng.html'"></footer>
+
+</body>

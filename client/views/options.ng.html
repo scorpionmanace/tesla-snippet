@@ -1,0 +1,36 @@
+<section class="details-container">
+    
+    <!--    Some other presentation code may be in written here inside the section-->
+    
+    <div class="options-wrapper" id="ListOfOptionsWrapper" ng-controller="OptionsController">
+
+        <!--wrapper containing List items for name and price of the option-->
+
+        <div class="list-wrapper">
+            <div class="list-item" ng-repeat="option in data_options">
+                <label class="floatleft option_name">{{option.name}}</label>
+                <span class="floatright" ng-show="showPrice.checked">{{option.price == 0?'':currency}} <i>{{option.price == 0 ? '-' : option.price}}</i></span>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <!--        Total Price of the Options-->
+
+        <div class="list-item">
+            <label class="floatleft"><strong>Total Price</strong></label>
+            <span class="floatright" ng-show="showPrice.checked"><strong>{{option.price == 0?'':currency}}<i>{{total}}</i></strong></span>
+            <div class="clear"></div>
+        </div>
+
+        <!--        custom made button wrapper for toggle switch-->
+
+        <div class="button-wrapper">
+            <label class="floatleft">Show Pricing</label>
+            <div class="switch floatright">
+                <input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" ng-model="showPrice.checked" ng-change="showPrice.change()">
+                <label for="cmn-toggle-4"></label>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="clear"></div>
